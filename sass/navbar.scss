@@ -1,0 +1,107 @@
+@import "_default";
+.navbar {
+    box-sizing: content-box;
+    background-color: $inv-orange;
+    padding-block: 0.2rem;
+    height: 4rem;
+    width: 100vw;
+
+    position: fixed;
+    top: 0px;
+
+    color: white;
+    border-bottom: black solid 4px;
+
+    display: grid;
+    grid-template-columns: 30px 15rem 5rem 1fr repeat(6, 8rem) 30px;
+    grid-template-rows: 1fr;
+
+    justify-content: stretch;
+    img {
+        height: inherit;
+        color: inherit;
+    }
+
+    button {
+        height: 4rem;
+        width: 100%;
+
+        justify-self: center;
+        align-self: center;
+
+        position: relative;
+
+        text-transform: capitalize;
+
+        outline: none;
+
+        color: inherit;
+        font-size: 1.3rem;
+        background-color: transparent;
+        border: none;
+
+        &:hover, &:focus {
+            opacity: 60%;
+        }
+    }
+
+    .wide{
+        width: 50ch;
+    }
+
+    .dropdown{
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            svg {
+                fill: white;
+                height: 1.3rem;
+            }
+        }
+
+        .content{
+            display: none;
+            border-radius: 0.5rem;
+            background-color: transparent;
+
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            top: calc(100% - 1rem);
+
+            flex-direction: column;
+            gap: 0.1rem;
+            background-color: $inv-orange;
+        
+            a,
+            :active {
+                text-decoration: none;
+                font-size: 1rem;
+                color: white;
+                padding-inline: 3ch;
+                padding-block: 0.3rem;
+        
+                border-bottom: solid black 2px;
+        
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        
+            a:hover {
+                opacity: 60%;
+                font-size: 1.1rem;
+                padding-inline: calc(3ch - 0.2rem);
+                padding-block: calc(0.3rem - 0.2rem);
+            }
+            }
+
+            &:hover, &:focus {
+                opacity: 100%;
+            }
+        }
+}
+
+.dropdown:hover > .content, .dropdown:focus> .content, .dropdown:focus-within > .content{
+    display: flex;
+} 
