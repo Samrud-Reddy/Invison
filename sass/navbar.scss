@@ -46,7 +46,10 @@
     }
 
     .wide{
-        width: 18ch;
+        width: 16ch !important;
+        a {
+            padding-inline: 2ch !important;
+        }
     }
 
     .dropdown{
@@ -64,6 +67,8 @@
             border-radius: 0.5rem;
             background-color: transparent;
 
+            width: 11ch;
+
             position: absolute;
             right: 50%;
             transform: translateX(50%);
@@ -72,13 +77,12 @@
             flex-direction: column;
             gap: 0.1rem;
             background-color: $inv-orange;
-        
-            a,
-            :active {
+            
+            a{
                 text-decoration: none;
                 font-size: 1rem;
                 color: white;
-                padding-inline: 3ch;
+                padding-inline: 2ch;
                 padding-block: 0.3rem;
         
                 border-bottom: solid black 2px;
@@ -87,14 +91,13 @@
                     border-bottom: none;
                 }
             }
-        
+    
             a:hover {
                 opacity: 60%;
-                font-size: 1.1rem;
-                padding-inline: calc(3ch - 0.2rem);
-                padding-block: calc(0.3rem - 0.2rem);
+                // padding-inline: calc(3ch - 0.2rem);
+                // padding-block: calc(0.3rem - 0.2rem);
             }
-            }
+        }
 
             &:hover, &:focus {
                 opacity: 100%;
