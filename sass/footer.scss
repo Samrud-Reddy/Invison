@@ -1,22 +1,65 @@
+@import "_colors";
 .footer {
     border-top: black 5px solid;
     background-color: #aaa;
-    height: 17rem;
+    height: 15rem;
 
-    display: flex;
-    flex-direction: row;
-}
+    padding-inline: 5rem;
+    display: grid;
+    grid-template-columns: 331px 1fr 25ch 45ch;
 
-.contactinfo {
-    a {
-        display: block;
-        width: 2.5rem;
-        height: 2.5rem;
+    align-items: center;
+    justify-items: center;
 
-        padding: 0.3rem;
-        
-        border-radius: 50%;
-        border: solid 2px black;
+    .big-logo {
+        height: 9rem;
+    }
 
+    p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.2px;
+
+        justify-self: start;
+
+        padding-left: 2rem;
+    }
+
+    .contactinfo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        a {
+            text-decoration: none;
+            color: $inv-dark-blue;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+
+            img {
+                height: 2rem;
+                width: 2rem;         
+            }
+
+            div {
+                font-weight: 600;
+                letter-spacing: 0.4px;
+                text-transform: capitalize;
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .long {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        height: 70%;
+        div {
+            text-transform: none !important;
+        }
     }
 }
