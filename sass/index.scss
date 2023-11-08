@@ -1,7 +1,8 @@
 @import "_default";
 
 body {
-
+    overflow-x: hidden;
+    background-color: #ffffff;
     .banner {
         width: 100%;
         height: calc(100vh - calc(4rem + 4px));
@@ -71,13 +72,14 @@ body {
 }
 
 .outline{
-    padding-top: 2rem;
-    padding-inline: 13rem;
+    padding-top: 6rem;
+    padding-inline: max(2rem, calc(15vw - 5rem));
     height: 100vh;
-    background-color: white;
     width: 100vw;
 
+
     h2 {
+        color: $inv-orange;
         font-size: 4rem;
         margin-bottom: 3rem;
     }
@@ -91,6 +93,8 @@ body {
 
         p {
             width: 180ch;
+            font-size: 1.1rem;
+            line-height: 1.4rem;
         }
 
         img {
@@ -99,3 +103,7 @@ body {
         }
     }
 }
+
+// @media only screen and (max-width: 1000px) {
+//     .outline {padding-inline: 5vw;}
+// }
