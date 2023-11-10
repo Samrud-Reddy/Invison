@@ -71,10 +71,9 @@ body {
     }
 }
 
-.outline{
-    padding-top: 6rem;
+.main {
+    padding-block: 4rem;
     padding-inline: max(2rem, calc(15vw - 5rem));
-    height: 100vh;
     width: 100vw;
 
 
@@ -99,8 +98,26 @@ body {
 
         img {
             width: 60rem;
-            border: solid 2px black;
+            border: solid 3px black;
         }
+    }
+
+}
+
+.about_us {
+    border-top: solid black 3px;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    text-align: right;
+
+    h2 {
+        text-align: center;
+        position: relative;
+        left: 15rem;
+    }
+
+    p {
+        text-align: left;
     }
 }
 
