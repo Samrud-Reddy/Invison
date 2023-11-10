@@ -1,1 +1,136 @@
 @import "_default";
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .icon {
+        aspect-ratio: 1/1;
+        width: 9rem;
+        height: 9rem;
+
+        margin-top: 2rem;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        text-transform: capitalize;
+        text-decoration: underline solid 4px;
+        font-weight: 100;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.2rem;
+
+        width: 100ch;
+
+        margin-top: 2rem;
+        line-height: 1.8rem;
+
+        color: #444;
+
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        button {
+            background-color: $inv-blue;
+            border: solid black 3px;
+            border-radius: 1rem;
+
+            font-size: 2rem;
+            color: white;
+
+            padding-block: 0.5rem;
+            padding-inline: 1ch;
+            
+            margin-block: 2rem;
+
+            &:hover {
+                opacity: 80%;
+            }
+        }
+    }
+}
+
+.team {
+    position: relative;
+    width: 100%;
+
+    // background-color: white;
+    padding: 2rem;
+
+    padding-bottom: 6rem;
+
+    .bg-image {
+        position: absolute;
+        inset: 0px;
+
+        opacity: 55%;
+
+        height: 100%;
+        width: 100%;
+
+        z-index: 0;
+    }
+
+    h2 {
+        position: relative;
+        z-index: 1;
+
+        font-size: 4rem;
+        text-align: center;
+        text-decoration: underline solid 4px;
+
+        color: black;
+        opacity: 80%;
+    }
+
+    .people {
+        top: 2rem;
+
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+                border: solid 3px black;
+            }
+
+            h3 {
+                text-transform: capitalize;
+                font-size: 2.2rem;
+            }
+
+            p {
+                margin-top: 2rem;
+                width: 40ch;
+
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+
+                text-align: center;
+            }
+        }
+    }
+}
+

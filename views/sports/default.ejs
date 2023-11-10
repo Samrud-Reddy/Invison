@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= name %></title>
+    <link rel="stylesheet" href="styles/sports.css">
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    <div class="center">
+        <img class = "icon" src="/files/sports/icons/<%= name %>.png" alt="<%= name %>">
+
+        <h1><%= name %></h1>
+        <p><%= description %></p>
+    
+        <div class="buttons">
+            <button>Rules</button>
+            <button>Schedule</button>
+        </div>
+    </div>
+
+    <section class="team">
+        <h2>The Team</h2>
+        <img class="bg-image" src="/files/sports/background/<%= name %>.jpeg" alt="<%= name %> background">
+
+        <div class="people">
+            <% for( let i = 0; i < team.length; i++ ) { %>
+               <div class="profile">
+                    <img src="files/sports/people/blank.jpeg" alt="">
+                    <!-- <img src="files/sports/people/<%= team[i].name %>.jpeg" alt=""> -->
+                    <h3><%= team[i].name %></h3>
+                    <p><%= team[i].description %></p>
+               </div> 
+            <% } %>
+        </div>
+    </section>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
