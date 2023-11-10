@@ -25,7 +25,7 @@ app.get("/event/sports/cricket", (req, res) => {
   res.send("/event/sports/cricket")
 })
 app.get("/event/sports/football", (req, res) => {
-  res.send("/event/sports/football")
+  res.render("sports/football.ejs")
 })
 app.get("/event/sports/basketball", (req, res) => {
   res.send("/event/sports/basketball")
